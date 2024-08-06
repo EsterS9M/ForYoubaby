@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  padding: 2rem;
+}
+
+#backgroundVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; 
+  z-index: -1; 
+}
+
+.card {
+  background-color: #000000;
+  border-radius: 8px;
+  width: 90vw;
+  max-width: 1000px;
+  height: 90vh;
+  max-height: 800px;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(rgba(22, 18, 18, 0.493), rgba(41, 37, 37, 0.596));
+  overflow: hidden;
+}
+
+img.birthday {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.text {
+  padding: 1rem;
+  color: #ffffff;
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+.space {
+  height: 90px;
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 10px;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 750px) {
+  body {
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+
+  .card {
+    width: 90vw;
+    height: auto;
+    padding: 20px;
+  }
+
+  img.birthday {
+    max-height: 40%;
+  }
+
+  .text {
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 95vw;
+    padding: 10px;
+  }
+
+  img.birthday {
+    max-height: 40%;
+  }
+
+  .text {
+    font-size: 0.9em;
+  }
+}
